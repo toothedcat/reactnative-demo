@@ -114,7 +114,7 @@
         "react/require-render-return":"error",//render函数必须使用return
         "react/jsx-indent-props": [
             "error",
-            2//jsx组件props的缩进,必须为2个空格
+            4//jsx组件props的缩进,必须为2个空格
         ],
 
         // react-native
