@@ -27,6 +27,8 @@ export default class Home extends React.Component {
                 <Button style={styles.button} onPress={() => {navigate('ScrollViewDemo');}} title="Go to ScrollViewDemo" />
                 <Button style={styles.button} onPress={() => {navigate('PagingDemo');}} title="Go to PagingDemo" />
                 <Button style={styles.button} onPress={() => {navigate('ZoomDemo');}} title="Go to ZoomDemo" />
+                <Button style={styles.button} onPress={() => {navigate('FlatListDemo');}} title="Go to FlatListDemo" />
+                <Button style={styles.button} onPress={() => {navigate('SectionListDemo');}} title="Go to SectionListDemo" />
             </ScrollView>
         );
     }

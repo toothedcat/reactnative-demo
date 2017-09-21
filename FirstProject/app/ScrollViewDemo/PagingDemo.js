@@ -46,16 +46,16 @@ const styles = StyleSheet.create({
 
 
 const data = [{
-    img:'./img/pic-1.jpg',
+    img:require('./img/pic-1.jpg'),
     title:'风景图片1'
 },{
-    img:'./img/pic-2.jpg',
+    img:require('./img/pic-2.jpg'),
     title:'风景图片2'
 },{
-    img:'./img/pic-3.jpg',
+    img:require('./img/pic-3.jpg'),
     title:'风景图片3'
 },{
-    img:'./img/pic-4.jpg',
+    img:require('./img/pic-4.jpg'),
     title:'风景图片4'
 }];
 
@@ -74,7 +74,7 @@ class Slider extends React.Component{
     componentDidMount(){
         this._startTimer();
     }
-    componentWillDestroy(){
+    componentWillUnmount(){
         this._clearTimer();
     }
     _clearTimer(){
@@ -112,7 +112,7 @@ class Slider extends React.Component{
         return data.map((item,index) => {
             return (
                 <View style={[styles.item,{width:this.props.width}]} key={index}>
-                    <Image source={require(`${item.img}`)} />
+                    <Image source={item.img} style={{width:'100%',height:this.props.height,resizeMode:Image.resizeMode.stretch}} />
                     <Text style={styles.title}>{item.title}</Text>
                 </View>
             );
